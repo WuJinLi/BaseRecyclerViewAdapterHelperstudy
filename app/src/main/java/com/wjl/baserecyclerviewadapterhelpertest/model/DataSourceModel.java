@@ -1,4 +1,4 @@
-package com.wjl.baserecyclerviewadapterhelpertest;
+package com.wjl.baserecyclerviewadapterhelpertest.model;
 
 import android.graphics.drawable.Drawable;
 
@@ -9,7 +9,7 @@ import java.io.Serializable;
  * time  : 2018/10/23
  * desc  :
  */
-public class Model implements Serializable {
+public class DataSourceModel implements Serializable {
     private String title;
     private String content;
     private Drawable imgUrl;
