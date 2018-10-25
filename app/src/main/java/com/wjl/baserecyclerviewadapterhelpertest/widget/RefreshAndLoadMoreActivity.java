@@ -72,14 +72,11 @@ public class RefreshAndLoadMoreActivity extends AppCompatActivity {
         loadDataView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                adapter.setEnableLoadMore(false);
                 ObtainBusniessData.getInstance(mContext).refreshData(new CallBackListener() {
                     @Override
-                    public void callBack(int count, List<DataSourceModel> models) {
+                    public void callBack(int count, List models) {
                         mCount = count;
-                        adapter.setNewData(models);
-                        adapter.setEnableLoadMore(true);
-                        swipeLayout.setRefreshing(false);
+                        adapter.setNewData((List<DataSourceModel>) models);
                     }
                 });
             }
@@ -100,11 +97,12 @@ public class RefreshAndLoadMoreActivity extends AppCompatActivity {
                         //刷新数据
                         ObtainBusniessData.getInstance(mContext).refreshData(new CallBackListener() {
                             @Override
-                            public void callBack(int count, List<DataSourceModel> models) {
+                            public void callBack(int count, List models) {
                                 //加载新数据 操作类似addAll
-                                adapter.replaceData(models);
+                                adapter.replaceData((List<DataSourceModel>) models);
                                 adapter.setEnableLoadMore(true);
                                 swipeLayout.setRefreshing(false);
+                                mCount=count;
                             }
                         });
                     }
@@ -121,11 +119,11 @@ public class RefreshAndLoadMoreActivity extends AppCompatActivity {
 
                 ObtainBusniessData.getInstance(mContext).loadMoreData(mCount, new CallBackListener() {
                     @Override
-                    public void callBack(int count, List<DataSourceModel> models) {
-                        if (count == 4) {
+                    public void callBack(int count, List models) {
+                        if (count >= 4) {
                             adapter.loadMoreEnd();
                         } else {
-                            adapter.addData(models);
+                            adapter.addData((List<DataSourceModel>) models);
                             adapter.loadMoreComplete();
                         }
                         mCount = count;

@@ -17,9 +17,9 @@ public class Constract {
 
 
 
-    public static final String REFRESH_LOADMORE_DESC="数据加载刷新";//上拉加载更多，下拉刷新
+    public static final String REFRESH_LOADMORE_DESC="加载刷新";//上拉加载更多，下拉刷新
     public static final String ANIMATION_DESC="动画效果";//动画效果
-    public static final String MULTIPLE_LAYOUT_DESC="多布局";//多布局
-    public static final String ITEM_CLICK_LISTTENER_DESC="点击事件处理";//条目点击事件处理
+    public static final String MULTIPLE_LAYOUT_DESC="多 布 局";//多布局
+    public static final String ITEM_CLICK_LISTTENER_DESC="点击事件";//条目点击事件处理
 
 }

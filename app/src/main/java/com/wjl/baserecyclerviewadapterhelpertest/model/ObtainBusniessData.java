@@ -5,6 +5,10 @@ import android.content.Context;
 import com.wjl.baserecyclerviewadapterhelpertest.CallBackListener;
 import com.wjl.baserecyclerviewadapterhelpertest.Constract;
 import com.wjl.baserecyclerviewadapterhelpertest.R;
+import com.wjl.baserecyclerviewadapterhelpertest.widget.AnimationActivity;
+import com.wjl.baserecyclerviewadapterhelpertest.widget.ItemClickActivity;
+import com.wjl.baserecyclerviewadapterhelpertest.widget.MultipleActivity;
+import com.wjl.baserecyclerviewadapterhelpertest.widget.RefreshAndLoadMoreActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -84,10 +88,15 @@ public class ObtainBusniessData {
     public void initMainPageData(CallBackListener callBackListener) {
         List<MainItemModel> mainItemModels = new ArrayList<>();
 
-        mainItemModels.add(new MainItemModel(Constract.REFRESH_LOADMORE_TYPE, Constract.REFRESH_LOADMORE_DESC));
-        mainItemModels.add(new MainItemModel(Constract.ANIMATION_TYPE, Constract.ANIMATION_DESC));
-        mainItemModels.add(new MainItemModel(Constract.MULTIPLE_LAYOUT_TYPE, Constract.MULTIPLE_LAYOUT_DESC));
-        mainItemModels.add(new MainItemModel(Constract.ITEM_CLICK_LISTTENER_TYPE, Constract.ITEM_CLICK_LISTTENER_DESC));
+        mainItemModels.add(new MainItemModel(Constract.REFRESH_LOADMORE_TYPE, Constract.REFRESH_LOADMORE_DESC, context
+                .getDrawable(R.drawable.ic_refresh_load_more), RefreshAndLoadMoreActivity.class));
+        mainItemModels.add(new MainItemModel(Constract.ANIMATION_TYPE, Constract.ANIMATION_DESC, context.getResources
+                ().getDrawable(R.drawable.ic_animation), AnimationActivity.class));
+        mainItemModels.add(new MainItemModel(Constract.MULTIPLE_LAYOUT_TYPE, Constract.MULTIPLE_LAYOUT_DESC, context
+                .getResources().getDrawable(R.drawable.ic_multiple), MultipleActivity.class));
+        mainItemModels.add(new MainItemModel(Constract.ITEM_CLICK_LISTTENER_TYPE, Constract
+                .ITEM_CLICK_LISTTENER_DESC, context.getResources().getDrawable(R.drawable.ic_onclick),
+                ItemClickActivity.class));
 
 
         callBackListener.callBack(-1, mainItemModels);

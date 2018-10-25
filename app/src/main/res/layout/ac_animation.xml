@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:orientation="vertical">
+
+    <!--<LinearLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="50dp"-->
+        <!--android:orientation="horizontal"-->
+        <!--&gt;-->
+
+        <!--<TextView-->
+            <!--android:id="@+id/tv_alphain"-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_weight="1"-->
+            <!--android:gravity="center"-->
+            <!--android:text="渐显"-->
+            <!--/>-->
+
+        <!--<TextView-->
+            <!--android:id="@+id/tv_scalein"-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_weight="1"-->
+            <!--android:gravity="center"-->
+            <!--android:text="缩放"-->
+            <!--/>-->
+
+
+        <!--<TextView-->
+            <!--android:id="@+id/tv_slidein_bottom"-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_weight="1"-->
+            <!--android:gravity="center"-->
+            <!--android:text="从下到上"-->
+            <!--/>-->
+
+        <!--<TextView-->
+            <!--android:id="@+id/tv_slidein_left"-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_weight="1"-->
+            <!--android:gravity="center"-->
+            <!--android:text="从左到右"-->
+            <!--/>-->
+
+
+        <!--<TextView-->
+            <!--android:id="@+id/tv_slidein_right"-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_weight="1"-->
+            <!--android:gravity="center"-->
+            <!--android:text="从右到左"-->
+            <!--/>-->
+    <!--</LinearLayout>-->
+
+
+    <android.support.design.widget.TabLayout
+        android:id="@+id/tb_tab"
+        android:layout_width="match_parent"
+        app:tabMode="scrollable"
+        android:layout_height="50dp"/>
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_animation_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</LinearLayout>
